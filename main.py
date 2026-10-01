@@ -9,7 +9,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 def generate_x_post(usr_input: str) -> str:
     payload = {
-        "model": "",
+        "model": "gpt-4o",
         "input": "",
     }
     response = requests.post(
