@@ -34,6 +34,11 @@ def generate_x_post(topic: str) -> str:
         }
     )
 
+    response_text = response.json().get("output", [{}])[
+        0].get("content", [{}])[0].get("text", "")
+    
+    return response_text
+
 def main():
     # user input => AI (LLM) to generate X post => output post
 
